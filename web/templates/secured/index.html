@@ -1,0 +1,13 @@
+{{define "content"}}
+<form action="/create-location" method="POST">
+    <div class="mb-3">
+        <label for="location" class="form-label">Locația vizitată</label>
+        <input id="location" name="location" class="form-control"/>
+    </div>
+    <div class="mb-3">
+        <label for="date" class="form-label">Vizitat la data de</label>
+        <input id="date" name="visitDate" class="form-control" type="date" />
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>
+{{end}}

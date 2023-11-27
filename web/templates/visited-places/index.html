@@ -1,0 +1,28 @@
+{{define "visited-places/index.html"}}
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Location</th>
+            <th scope="col">Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{range .locations}}
+        {{if .Last}}
+        <tr hx-get="/visited-locations/?page={{$.page}}" hx-trigger="revealed" hx-swap="afterend">
+            <th scope="row">{{.Id}}</th>
+            <td>{{.Name}}</td>
+            <td>{{.Date}}</td>
+        </tr>
+        {{else}}
+        <tr>
+            <th scope="row">{{.Id}}</th>
+            <td>{{.Name}}</td>
+            <td>{{.Date}}</td>
+        </tr>
+        {{end}}
+        {{end}}
+    </tbody>
+</table>
+{{end}}

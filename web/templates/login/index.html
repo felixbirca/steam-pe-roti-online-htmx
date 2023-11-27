@@ -1,0 +1,20 @@
+{{ define "login/index.html" }}<html>
+
+<head>
+    <script src="https://www.gstatic.com/firebasejs/10.5.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.5.0/firebase-auth-compat.js"></script>
+    <script src="./login/index.js" defer></script>
+</head>
+<h1>
+    {{ .title }}
+</h1>
+<h2>
+    {{.user}}
+</h2>
+<p>Using posts/index.tmpl</p>
+<button id="loginButton">
+    Log me in
+</button>
+
+</html>
+{{ end }}
